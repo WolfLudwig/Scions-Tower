@@ -2,3 +2,14 @@ h1{
     text-align: center;
     text-decoration: underline;
 }
+nav a {
+    background-color: slateblue;
+    border: slategray 3px solid;
+    border-radius: 5px;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: slateblue;
+    border: black 3px solid;
+}

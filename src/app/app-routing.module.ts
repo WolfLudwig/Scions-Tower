@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { ScionsComponent } from './scions/scions.component';
 
-
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'scions', component: ScionsComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

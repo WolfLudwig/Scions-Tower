@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScionsComponent } from './scions/scions.component';
 import { ScionDetailComponent } from './scion-detail/scion-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScionsComponent,
-    ScionDetailComponent
+    ScionDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

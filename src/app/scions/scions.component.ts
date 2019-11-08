@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Scion } from '../scion';
-import { SCIONS } from '../mock-scions';
+import { ScionService } from '../scion.service';
 
 @Component({
   selector: 'app-scions',
@@ -9,19 +9,24 @@ import { SCIONS } from '../mock-scions';
 })
 export class ScionsComponent implements OnInit {
 
-  scions = SCIONS;
+  scions: Scion[];
 
   scion: Scion = {id: 1, name: "louissoix", lastname: "leveilleur", race: "elezen", job: "mage blanc"};
 
   selectedScion: Scion;
 
-  constructor() { }
+  constructor(private scionService: ScionService) { }
 
+  getScions(): void{
+    this.scionService.getScions()
+      .subscribe(scions => this.scions = scions);
+  }
   onSelect(scion : Scion): void {
     this.selectedScion = scion;
   }
 
   ngOnInit() {
+    this.getScions();
   }
 
 }
