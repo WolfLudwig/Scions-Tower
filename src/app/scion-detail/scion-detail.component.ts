@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Scion} from '../scion'
 
 @Component({
   selector: 'app-scion-detail',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./scion-detail.component.css']
 })
 export class ScionDetailComponent implements OnInit {
+  @Input() scion: Scion;
 
   constructor() { }
 

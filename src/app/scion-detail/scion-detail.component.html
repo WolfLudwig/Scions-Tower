@@ -1,1 +1,22 @@
-<p>scion-detail works!</p>
+<div *ngIf="scion">
+  <h2>{{ scion.name | uppercase }}</h2>
+  <div>
+    <span>Nom complet: </span>{{ scion.name | titlecase }}
+    {{ scion.lastname | uppercase }}
+  </div>
+  <div><span>Race: </span>{{ scion.race | titlecase }}</div>
+  <div><span>Job: </span>{{ scion.job | titlecase }}</div>
+
+  <div>
+    <label
+      >name:
+      <input [(ngModel)]="scion.name" placeholder="name" />
+    </label>
+  </div>
+  <div>
+    <label
+      >lastname:
+      <input [(ngModel)]="scion.lastname" placeholder="lastname" />
+    </label>
+  </div>
+</div>
