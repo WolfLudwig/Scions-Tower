@@ -1,0 +1,28 @@
+<div class="block"><div class="list">
+  <h2>Membres des héritiers:</h2>
+  <ul class="scions">
+    <li *ngFor="let scion of scions"
+      [class.selected]="scion === selectedScion"
+      (click)="onSelect(scion)">
+      <span class="badge">{{ scion.id }}</span> {{ scion.name | titlecase}}
+    </li>
+  </ul>
+</div>
+
+<div class="details" *ngIf="selectedScion">
+  <h2>{{ selectedScion.name | uppercase }}</h2>
+  <div>
+    <span>Nom complet: </span>{{ selectedScion.name | titlecase }}
+    {{ selectedScion.lastname | uppercase }}
+  </div>
+  <div><span>Race: </span>{{ selectedScion.race | titlecase }}</div>
+  <div><span>Job: </span>{{ selectedScion.job | titlecase }}</div>
+
+  <div>
+    <label
+      >name:
+      <input [(ngModel)]="selectedScion.name" placeholder="name" />
+    </label>
+  </div>
+</div>
+</div>

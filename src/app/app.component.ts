@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tour-of-scions';
+  title = 'Tour des héritiers de la Septième Aube';
 }
