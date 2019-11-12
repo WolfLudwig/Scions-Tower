@@ -19,7 +19,7 @@ export class ScionService {
 
   getScion(id: number): Observable<Scion> {
     // Envoie le message de la requête.
-    this.messageService.add('ScionService: fetched scion ${id}');
+    this.messageService.add(`Héritier au rapport! (id=${id})`);
     return of(SCIONS.find(scion => scion.id === id));
   }
 }

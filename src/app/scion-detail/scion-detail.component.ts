@@ -29,4 +29,8 @@ export class ScionDetailComponent implements OnInit {
     .subscribe(scion => this.scion = scion);
   }
 
+  goBack(): void{
+    this.location.back();
+  }
+
 }
