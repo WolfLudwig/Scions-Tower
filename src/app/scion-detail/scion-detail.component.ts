@@ -4,6 +4,7 @@ import { Location } from '@angular/common'
 
 import {Scion} from '../scion'
 import { ScionService } from '../scion.service'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-scion-detail',
@@ -31,6 +32,11 @@ export class ScionDetailComponent implements OnInit {
 
   goBack(): void{
     this.location.back();
+  }
+
+  save(): void{
+    this.scionService.updateScion(this.scion)
+    .subscribe(() => this.goBack());
   }
 
 }

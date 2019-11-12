@@ -11,4 +11,21 @@
       </li>
     </ul>
   </div>
+
+  <div class="add">
+    <label> Prénom de l'héritier:
+      <input #scionName />
+    </label>
+    <label> Nom de l'héritier:
+      <input #scionLastname />
+    </label>
+    <label> Race de l'héritier:
+      <input #scionRace />
+    </label>
+    <label> Job de l'héritier:
+      <input #scionJob />
+    </label>
+    <!-- Ajoute les valeurs et vide les champs -->
+    <button (click)="add(scionName.value , scionLastname.value, scionRace.value , scionJob.value); scionName.value=''; scionLastname.value=''; scionRace.value=''; scionName.value='' ">Ajouter</button>
+  </div>
 </div>

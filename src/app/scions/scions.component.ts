@@ -22,5 +22,16 @@ export class ScionsComponent implements OnInit {
       .subscribe(scions => this.scions = scions);
   }
 
+  add(name: string ,lastname: string, race: string , job: string): void {
+    name = name.trim();
+    lastname= lastname.trim();
+    race = race.trim();
+    job = job.trim();
+    if (!name) {return;}
+    this.scionService.addScion({name, lastname, race, job} as Scion)
+      .subscribe(scion => {
+        this.scions.push(scion);
+      })
+  }
 
 }
