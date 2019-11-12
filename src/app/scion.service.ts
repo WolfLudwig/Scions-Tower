@@ -16,4 +16,10 @@ export class ScionService {
     this.messageService.add('Les héritiers sont arrivés!')
     return of(SCIONS);
   }
+
+  getScion(id: number): Observable<Scion> {
+    // Envoie le message de la requête.
+    this.messageService.add('ScionService: fetched scion ${id}');
+    return of(SCIONS.find(scion => scion.id === id));
+  }
 }

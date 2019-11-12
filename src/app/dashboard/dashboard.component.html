@@ -1,0 +1,7 @@
+<h3>Top Scions</h3>
+<a *ngFor="let scion of scions" class="col-1-4"
+    routerLink="/detail/{{scion.id}}" >
+    <div class="module scion">
+        {{scion.name}}
+    </div>
+</a>

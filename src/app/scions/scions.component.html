@@ -4,13 +4,11 @@
     <ul class="scions">
       <li
         *ngFor="let scion of scions"
-        [class.selected]="scion === selectedScion"
-        (click)="onSelect(scion)"
       >
+      <a routerLink="/detail/{{scion.id}}">
         <span class="badge">{{ scion.id }}</span> {{ scion.name | titlecase }}
+      </a>
       </li>
     </ul>
   </div>
-
-  <app-scion-detail [scion]="selectedScion" class="details"></app-scion-detail>
 </div>

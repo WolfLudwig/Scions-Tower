@@ -9,4 +9,7 @@ export const SCIONS: Scion[] = [
     {id: 6, name: "thancred", lastname: "waters", race: "hyur", job: "surineur / pistosabreur"},
     {id: 7, name: "y'shtola", lastname: "rhul", race: "miqo'te", job: "mage blanc / mage noir"},
     {id: 8, name: "yda", lastname: "hext", race: "hyur", job: "moine"},
+    {id: 9, name: "papalymo", lastname: "Totolymo", race: "lalafell", job: "mage blanc"},
+    {id: 10, name: "urianger", lastname: "augurelt", race: "elezen", job: "invocateur / astromancien"},
+    {id: 11, name: "Moenbryda", lastname: "Wilfsunnwyn", race: "Roegadyn", job: "guerrier"},
 ];

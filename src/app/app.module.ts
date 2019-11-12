@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ScionsComponent } from './scions/scions.component';
 import { ScionDetailComponent } from './scion-detail/scion-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScionsComponent,
     ScionDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
