@@ -1,30 +1,29 @@
+<h2>Membres des héritiers:</h2>
 <div class="block">
   <div class="list">
-    <h2>Membres des héritiers:</h2>
     <ul class="scions">
       <li
         *ngFor="let scion of scions"
       >
+      <span class="badge">{{ scion.id }}</span>
       <a routerLink="/detail/{{scion.id}}">
-        <span class="badge">{{ scion.id }}</span> {{ scion.name | titlecase }}
+        {{ scion.name | titlecase }}
       </a>
+      <button class="delete" title="delete scion"
+        (click)="delete(scion)">x</button>
       </li>
     </ul>
   </div>
 
   <div class="add">
-    <label> Prénom de l'héritier:
-      <input #scionName />
-    </label>
-    <label> Nom de l'héritier:
-      <input #scionLastname />
-    </label>
-    <label> Race de l'héritier:
-      <input #scionRace />
-    </label>
-    <label> Job de l'héritier:
-      <input #scionJob />
-    </label>
+    <div class="name"><label>Prénom de l'héritier:</label>
+      <input #scionName /></div>
+    <div class="lastname"><label> Nom de l'héritier:</label>
+      <input #scionLastname /></div>
+    <div class="race"><label> Race de l'héritier:</label>
+      <input #scionRace /></div>
+    <div class="job"><label> Job de l'héritier:</label>
+      <input #scionJob /></div>
     <!-- Ajoute les valeurs et vide les champs -->
     <button (click)="add(scionName.value , scionLastname.value, scionRace.value , scionJob.value); scionName.value=''; scionLastname.value=''; scionRace.value=''; scionName.value='' ">Ajouter</button>
   </div>

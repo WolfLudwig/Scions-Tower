@@ -11,6 +11,7 @@ import { ScionsComponent } from './scions/scions.component';
 import { ScionDetailComponent } from './scion-detail/scion-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ScionSearchComponent } from './scion-search/scion-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ScionsComponent,
     ScionDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    ScionSearchComponent
   ],
   imports: [
     HttpClientModule,

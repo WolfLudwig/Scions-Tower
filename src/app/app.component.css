@@ -1,15 +1,26 @@
 h1{
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 25px;
     text-align: center;
     text-decoration: underline;
+    color: #000000;
+    background-color: rgba(109, 69, 136, 0.3);
+}
+nav{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
 }
 nav a {
-    background-color: slateblue;
-    border: slategray 3px solid;
-    border-radius: 5px;
-    padding: 0.5rem;
+    background-color: rgb(52, 45, 59);
+    margin: 0 1.2rem;
+    padding: 1rem;
+    color: rgb(148, 135, 170);
+    font-size: 1.2rem;
     text-decoration: none;
 }
 nav a:hover{
     background-color: slateblue;
-    border: black 3px solid;
+    font-weight: 800;
 }

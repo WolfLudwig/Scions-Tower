@@ -1,31 +1,76 @@
-/* HeroDetailComponent's private CSS styles */
+.block {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  width: 20%;
+  margin: 2rem auto;
+  text-align: center;
+  border-radius: 25px;
+  background-color: rgba(52, 45, 59, 0.8);
+  color: rgb(160, 158, 165);
+}
+
+.carte {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  padding: 0.2rem;
+  background-color: rgba(160, 158, 165, 0.5);
+  border: rgba(52, 45, 59, 0.5) solid 2px;
+  border-radius: 5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infos {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  padding-right: 0.3rem;
+  border-radius: 0 5px 5px 0;
+  background-color: rgba(52, 45, 59, 0.8);
+  color: rgb(160, 158, 165);
+}
+
+.infos span {
+  margin-right: 0.5rem;
+  background-color: rgba(160, 158, 165, 0.8);
+  color: rgb(52, 45, 59);
+}
+
+.update {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5rem;
+}
+
 label {
-    display: inline-block;
-    width: 3em;
-    margin: .5em 0;
-    color: #607D8B;
-    font-weight: bold;
-  }
-  input {
-    height: 2em;
-    font-size: 1em;
-    padding-left: .4em;
-  }
-  button {
-    margin-top: 20px;
-    font-family: Arial;
-    background-color: #eee;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    cursor: hand;
-  }
-  button:hover {
-    background-color: #cfd8dc;
-  }
-  button:disabled {
-    background-color: #eee;
-    color: #ccc;
-    cursor: auto;
-  }
+  background-color: rgb(52, 45, 59);
+  margin: 5rem 0.5rem;
+  padding: 0.5rem 0.5rem;
+  color: rgb(160, 158, 165);
+  border-radius: 5px;
+}
+
+.name,
+.lastname {
+  margin: 0.5rem 0;
+}
+
+button {
+  margin: 1.5rem;
+  font-size: 1.2rem;
+  background-color: rgb(160, 158, 165);
+  border-radius: 5px;
+  cursor: pointer;
+  cursor: hand;
+}

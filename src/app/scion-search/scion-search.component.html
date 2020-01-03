@@ -1,0 +1,13 @@
+<div id='search-component'>
+    <h3><label for="search-box">Scion Search</label></h3>
+
+    <input #searchBox id="search-box" (input)='search(searchBox.value)'>
+
+    <ul class="search-result">
+        <li *ngFor="let scion of scions$ | async">
+            <a routerLink="/detail/{{scion.id}}">
+                {{scion.name | titlecase}} {{scion.lastname | uppercase}}
+            </a>
+        </li>
+    </ul>
+</div>

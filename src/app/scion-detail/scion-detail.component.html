@@ -1,24 +1,29 @@
 <div *ngIf="scion">
   <h2>{{ scion.name | uppercase }}</h2>
-  <div>
-    <span>Nom complet: </span>{{ scion.name | titlecase }}
-    {{ scion.lastname | uppercase }}
-  </div>
-  <div><span>Race: </span>{{ scion.race | titlecase }}</div>
-  <div><span>Job: </span>{{ scion.job | titlecase }}</div>
+  <div class="block">
+    <div class="carte">
+      <img src="{{ scion.img }}" alt="{{ scion.name }}" />
+      <div class="info">
+        <div class="infos">
+          <span>Nom complet: </span>{{ scion.name | titlecase }}
+          {{ scion.lastname | uppercase }}
+        </div>
+        <div class="infos"><span>Race: </span>{{ scion.race | titlecase }}</div>
+        <div class="infos"><span>Job: </span>{{ scion.job | titlecase }}</div>
+      </div>
+    </div>
 
-  <div>
-    <label
-      >name:
-      <input [(ngModel)]="scion.name" placeholder="name" />
-    </label>
-  </div>
-  <div>
-    <label
-      >lastname:
-      <input [(ngModel)]="scion.lastname" placeholder="lastname" />
-    </label>
+    <div class="update">
+      <div class="name">
+        <label>name:</label>
+        <input [(ngModel)]="scion.name" placeholder="name" />
+      </div>
+      <div class="lastname">
+        <label>lastname:</label>
+        <input [(ngModel)]="scion.lastname" placeholder="lastname" />
+      </div>
+      <button (click)="save()">Enregistrer</button>
+    </div>
   </div>
 </div>
-<button (click)="save()">save</button>
-<button (click)="goBack()">go back</button>
+<button (click)="goBack()">Retour</button>
